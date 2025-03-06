@@ -1,0 +1,398 @@
+/* Quitamos cosas feas y ponemos todo bonito */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fondo súper oscuro como tormenta */
+body {
+    font-family: Arial, sans-serif; /* Fuente original */
+    background-color: #0A0F0D;
+    overflow-x: hidden;
+    color: #D3D3D3;
+    animation: slide-in 1s ease-out;
+}
+
+/* Animación de entrada (desde la derecha) */
+@keyframes slide-in {
+    0% { transform: translateX(100%); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Animación de salida (hacia la izquierda) */
+@keyframes slide-out {
+    0% { transform: translateX(0); opacity: 1; }
+    100% { transform: translateX(-100%); opacity: 0; }
+}
+
+/* El menú */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    padding: 10px 20px;
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+/* "Nitrox" en las páginas secundarias */
+body:not(.index) nav .nitrox {
+    color: #CCFF00; /* Verde fosforescente más brillante */
+    font-size: 24px;
+    font-family: Arial, sans-serif; /* Fuente original */
+    text-shadow: 
+        0 0 5px #CCFF00,
+        0 0 15px #CCFF00,
+        0 0 30px #00CED1,
+        0 0 50px #00CED1;
+    animation: electrico 1s infinite;
+    position: absolute;
+    left: 20px;
+    top: 5px; /* Subido unos milímetros */
+}
+
+/* "Nitrox" grande en la página principal */
+body.index .nitrox {
+    color: #CCFF00; /* Verde fosforescente más brillante */
+    font-size: 80px;
+    font-family: Arial, sans-serif; /* Fuente original */
+    text-shadow: 
+        0 0 5px #CCFF00,
+        0 0 15px #CCFF00,
+        0 0 30px #00CED1,
+        0 0 50px #00CED1;
+    animation: electrico 1s infinite;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ADFF2F; /* Verde fosforescente original para el menú */
+    text-decoration: none;
+    font-size: 18px;
+    font-family: Arial, sans-serif; /* Fuente original */
+    cursor: pointer;
+    text-shadow: 
+        0 0 5px #ADFF2F,
+        0 0 10px #ADFF2F;
+}
+
+nav ul li a:hover {
+    color: #1B4D3E;
+    text-shadow: none;
+}
+
+/* La sección principal (fondo con video, rayos o imagen) */
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fondo específico para Servicios */
+.servicios-bg {
+    background: url('CONEJO.png') no-repeat center center; 
+    background-size: contain; /* Ajusta la imagen a su tamaño natural */
+    background-color: #0A0F0D; /* Fondo oscuro si la imagen no llena todo */
+}
+
+/* Video de fondo */
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.8;
+}
+
+/* Título centrado en todas las páginas */
+.titulo {
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Asegura que ocupe todo el ancho para centrar el contenedor */
+}
+
+/* Contenedor para mensajes animados en Acerca de */
+.message-container {
+    position: relative;
+    width: 90%; /* Más ancho para textos largos */
+    max-width: 900px; /* Límite para que no sea exagerado */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    text-align: center; /* Centra el texto dentro */
+}
+
+/* Mensajes animados */
+.message {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    color: #00CED1;
+    font-size: 24px;
+    text-shadow: 
+        0 0 5px #00CED1,
+        0 0 10px #00CED1,
+        0 0 20px #00CED1;
+    background-color: rgba(10, 15, 13, 0.8); /* #0A0F0D con transparencia */
+    padding: 20px; /* Más espacio interno */
+    border-radius: 5px;
+    z-index: 5; /* Encima de los rayos */
+    animation: fade-message 12s infinite; /* 12s para 4 mensajes de 3s cada uno */
+    left: 0; /* Alineado al contenedor */
+    top: 0; /* Asegura que esté en la parte superior del contenedor */
+}
+
+.message[data-index="0"] { animation-delay: 0s; }
+.message[data-index="1"] { animation-delay: 3s; }
+.message[data-index="2"] { animation-delay: 6s; }
+.message[data-index="3"] { animation-delay: 9s; }
+
+@keyframes fade-message {
+    0% { opacity: 0; }
+    8% { opacity: 1; } /* Aparece */
+    25% { opacity: 1; } /* Se queda visible 3 segundos */
+    33% { opacity: 0; } /* Desaparece */
+    100% { opacity: 0; } /* Se queda oculto hasta el siguiente ciclo */
+}
+
+/* "Servicios y reparaciones" y textos similares */
+.subtitulo {
+    color: #00CED1;
+    font-size: 24px;
+    text-shadow: 
+        0 0 5px #00CED1,
+        0 0 10px #00CED1,
+        0 0 20px #00CED1;
+    animation: brillo-azul 1.5s infinite;
+}
+
+/* Animación de los puntitos en "Cargando..." */
+.dots {
+    display: inline-block;
+    width: 30px;
+    text-align: left;
+}
+
+.dots::after {
+    content: "...";
+    animation: dots 1.5s infinite steps(4);
+}
+
+@keyframes dots {
+    0% { opacity: 0; }
+    25% { opacity: 1; }
+    50% { opacity: 1; }
+    75% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Animación para el efecto eléctrico de "Nitrox" */
+@keyframes electrico {
+    0% { text-shadow: 0 0 5px #CCFF00, 0 0 15px #CCFF00, 0 0 30px #00CED1, 0 0 50px #00CED1; }
+    50% { text-shadow: 0 0 10px #CCFF00, 0 0 25px #CCFF00, 0 0 40px #00CED1, 0 0 70px #00CED1; }
+    100% { text-shadow: 0 0 5px #CCFF00, 0 0 15px #CCFF00, 0 0 30px #00CED1, 0 0 50px #00CED1; }
+}
+
+/* Animación para el brillo azul */
+@keyframes brillo-azul {
+    0% { text-shadow: 0 0 5px #00CED1, 0 0 10px #00CED1, 0 0 20px #00CED1; }
+    50% { text-shadow: 0 0 10px #00CED1, 0 0 20px #00CED1, 0 0 30px #00CED1; }
+    100% { text-shadow: 0 0 5px #00CED1, 0 0 10px #00CED1, 0 0 20px #00CED1; }
+}
+
+/* Contenedor para los rayos (solo en Proyectos y Acerca) */
+.rayos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* Estilo base de los rayos con efecto de raíces */
+.rayo1, .rayo2, .rayo3, .rayo4, .rayo5, .rayo6, .rayo7 {
+    position: absolute;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, #87CEEB, #00CED1);
+    opacity: 0;
+    animation: relampago 4s infinite;
+    box-shadow: 
+        0 0 10px #00CED1,
+        2px 0 5px #87CEEB,
+        -2px 0 5px #87CEEB,
+        4px 0 8px #00CED1,
+        -4px 0 8px #00CED1;
+}
+
+/* Posiciones y retrasos para que caigan sin parar */
+.rayo1 { left: 5%; animation-delay: 0s; }
+.rayo2 { left: 20%; animation-delay: 0.5s; }
+.rayo3 { left: 35%; animation-delay: 1s; }
+.rayo4 { left: 50%; animation-delay: 1.5s; }
+.rayo5 { left: 65%; animation-delay: 2s; }
+.rayo6 { left: 80%; animation-delay: 2.5s; }
+.rayo7 { left: 95%; animation-delay: 3s; }
+
+/* Keyframes para los relámpagos */
+@keyframes relampago {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+        box-shadow: 0 0 10px #00CED1, 2px 0 5px #87CEEB, -2px 0 5px #87CEEB;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0.7;
+        box-shadow: 
+            0 0 15px #00CED1,
+            4px 0 10px #87CEEB,
+            -4px 0 10px #87CEEB,
+            6px 0 12px #00CED1,
+            -6px 0 12px #00CED1;
+    }
+    30% {
+        opacity: 0.9;
+    }
+    40% {
+        opacity: 0.4;
+        transform: translateY(100%);
+        box-shadow: 
+            0 0 20px #00CED1,
+            6px 0 15px #87CEEB,
+            -6px 0 15px #87CEEB,
+            8px 0 18px #00CED1,
+            -8px 0 18px #00CED1;
+    }
+    50% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+}
+
+/* Estilos para los íconos de contacto */
+.contact-info {
+    font-size: 18px;
+    line-height: 2; /* Espacio entre líneas */
+    color: #00CED1;
+    text-shadow: 
+        0 0 5px #00CED1,
+        0 0 10px #00CED1;
+}
+
+.contact-icon {
+    width: 20px; /* Más chicos */
+    height: 20px;
+    vertical-align: middle; /* Alinea los íconos con el texto */
+    margin-right: 8px; /* Espacio reducido entre ícono y texto */
+}
+
+/* Estilo para los enlaces de contacto */
+.contact-link {
+    color: #00CED1;
+    text-decoration: none;
+    text-shadow: 
+        0 0 5px #00CED1,
+        0 0 10px #00CED1;
+}
+
+.contact-link:hover {
+    color: #ADFF2F; /* Verde fosforescente al pasar el ratón */
+    text-shadow: 
+        0 0 5px #ADFF2F,
+        0 0 10px #ADFF2F;
+}
+
+/* Diseño adaptable para móviles */
+@media (max-width: 768px) {
+    nav {
+        padding: 5px 10px;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+    body:not(.index) nav .nitrox {
+        font-size: 20px;
+        left: 10px;
+        top: 2px; /* Ajuste en móviles */
+    }
+    body.index .nitrox {
+        font-size: 50px;
+    }
+    .subtitulo {
+        font-size: 18px;
+    }
+    .message-container {
+        width: 95%; /* Más ancho en móviles */
+        max-width: 700px; /* Ajustado para móviles */
+    }
+    .message {
+        font-size: 18px;
+        padding: 15px; /* Ajustado para móviles */
+    }
+    .contact-info {
+        font-size: 16px;
+        line-height: 1.8; /* Ajustado para móviles */
+    }
+    .contact-icon {
+        width: 16px; /* Más pequeño en móviles */
+        height: 16px;
+        margin-right: 6px; /* Espacio ajustado */
+    }
+}
+
+@media (max-width: 480px) {
+    body.index .nitrox {
+        font-size: 40px;
+    }
+    .subtitulo {
+        font-size: 16px;
+    }
+    .message {
+        font-size: 16px;
+        padding: 10px; /* Más pequeño en pantallas chicas */
+    }
+    .contact-info {
+        font-size: 14px;
+        line-height: 1.6; /* Más compacto */
+    }
+    .contact-icon {
+        width: 14px; /* Aún más pequeño */
+        height: 14px;
+        margin-right: 5px;
+    }
+}
