@@ -35,7 +35,7 @@ nav {
     z-index: 3;
     display: flex;
     justify-content: center;
-    padding: 5px 10px; /* Reducido de 10px 20px */
+    padding: 5px 10px;
     align-items: center;
 }
 
@@ -336,20 +336,22 @@ nav ul li a:hover {
         padding: 5px;
     }
     nav ul {
-        flex-direction: row; /* Horizontal en tablets */
-        flex-wrap: wrap; /* Se ajusta si no cabe */
+        display: flex;
+        flex-direction: row; /* Siempre horizontal */
+        flex-wrap: nowrap; /* No se envuelve, queda en una línea */
         justify-content: center;
         padding: 0;
         margin: 0;
     }
     nav ul li {
-        margin: 2px 5px; /* Más compacto */
+        margin: 0 5px; /* Espacio pequeño entre ítems */
     }
     nav ul li a {
-        font-size: 14px; /* Más pequeño */
+        font-size: 14px; /* Tamaño pequeño pero legible */
+        padding: 2px 5px; /* Espacio interno compacto */
     }
     body:not(.index) nav .nitrox {
-        font-size: 18px; /* Más pequeño */
+        font-size: 18px;
         left: 5px;
         top: 2px;
     }
@@ -379,17 +381,17 @@ nav ul li a:hover {
 }
 
 @media (max-width: 480px) {
-    nav ul {
-        flex-direction: column; /* Columna en celulares pequeños */
-    }
-    nav ul li {
-        margin: 2px 0; /* Más apretado */
-    }
     nav ul li a {
-        font-size: 12px; /* Aún más pequeño */
+        font-size: 12px; /* Más pequeño en celulares */
+        padding: 2px 4px;
     }
     body.index .nitrox {
         font-size: 30px;
+    }
+    body:not(.index) nav .nitrox {
+        font-size: 16px;
+        left: 5px;
+        top: 2px;
     }
     .subtitulo {
         font-size: 14px;
