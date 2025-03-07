@@ -106,8 +106,9 @@ nav ul li a:hover {
 /* Fondo específico para Servicios */
 .servicios-bg {
     background: url('CONEJO-optimizado.png') no-repeat center center;
-    background-size: contain;
+    background-size: cover;
     background-color: #0A0F0D;
+    height: 100vh;
 }
 
 /* Video de fondo */
@@ -153,7 +154,7 @@ nav ul li a:hover {
         0 0 5px #00CED1,
         0 0 10px #00CED1,
         0 0 20px #00CED1;
-    background-color: #0A0F0D; /* Color exacto del fondo */
+    background-color: #0A0F0D;
     padding: 20px;
     border-radius: 5px;
     z-index: 5;
@@ -351,9 +352,7 @@ nav ul li a:hover {
         padding: 2px 5px;
     }
     body:not(.index) nav .nitrox {
-        font-size: 18px;
-        left: 5px;
-        top: -25px;
+        display: none;
     }
     body.index .nitrox {
         font-size: 40px;
@@ -378,6 +377,10 @@ nav ul li a:hover {
         height: 14px;
         margin-right: 5px;
     }
+    .servicios-bg {
+        background-size: auto 100%;
+        background-position: center top;
+    }
 }
 
 @media (max-width: 480px) {
@@ -389,9 +392,7 @@ nav ul li a:hover {
         font-size: 30px;
     }
     body:not(.index) nav .nitrox {
-        font-size: 16px;
-        left: 5px;
-        top: -20px;
+        display: none;
     }
     .subtitulo {
         font-size: 14px;
@@ -408,5 +409,9 @@ nav ul li a:hover {
         width: 12px;
         height: 12px;
         margin-right: 4px;
+    }
+    .servicios-bg {
+        background-size: auto 100%;
+        background-position: center top;
     }
 }
