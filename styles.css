@@ -105,7 +105,7 @@ nav ul li a:hover {
 
 /* Fondo específico para Servicios */
 .servicios-bg {
-    background: url('CONEJO-optimizado.png') no-repeat center center;
+    background: url('CONEJO.png') no-repeat center center;
     background-size: cover;
     background-color: #0A0F0D;
     height: 100vh;
