@@ -7,7 +7,7 @@
 
 /* Fondo súper oscuro como tormenta */
 body {
-    font-family: Arial, sans-serif; /* Fuente original */
+    font-family: Arial, sans-serif;
     background-color: #0A0F0D;
     overflow-x: hidden;
     color: #D3D3D3;
@@ -41,9 +41,9 @@ nav {
 
 /* "Nitrox" en las páginas secundarias */
 body:not(.index) nav .nitrox {
-    color: #CCFF00; /* Verde fosforescente más brillante */
+    color: #CCFF00;
     font-size: 24px;
-    font-family: Arial, sans-serif; /* Fuente original */
+    font-family: Arial, sans-serif;
     text-shadow: 
         0 0 5px #CCFF00,
         0 0 15px #CCFF00,
@@ -52,14 +52,14 @@ body:not(.index) nav .nitrox {
     animation: electrico 1s infinite;
     position: absolute;
     left: 20px;
-    top: 5px; /* Subido unos milímetros */
+    top: 5px;
 }
 
 /* "Nitrox" grande en la página principal */
 body.index .nitrox {
-    color: #CCFF00; /* Verde fosforescente más brillante */
+    color: #CCFF00;
     font-size: 80px;
-    font-family: Arial, sans-serif; /* Fuente original */
+    font-family: Arial, sans-serif;
     text-shadow: 
         0 0 5px #CCFF00,
         0 0 15px #CCFF00,
@@ -72,7 +72,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 nav ul li {
@@ -80,10 +80,10 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #ADFF2F; /* Verde fosforescente original para el menú */
+    color: #ADFF2F;
     text-decoration: none;
     font-size: 18px;
-    font-family: Arial, sans-serif; /* Fuente original */
+    font-family: Arial, sans-serif;
     cursor: pointer;
     text-shadow: 
         0 0 5px #ADFF2F,
@@ -105,9 +105,9 @@ nav ul li a:hover {
 
 /* Fondo específico para Servicios */
 .servicios-bg {
-    background: url('CONEJO.png') no-repeat center center; 
-    background-size: contain; /* Ajusta la imagen a su tamaño natural */
-    background-color: #0A0F0D; /* Fondo oscuro si la imagen no llena todo */
+    background: url('CONEJO-optimizado.png') no-repeat center center;
+    background-size: contain;
+    background-color: #0A0F0D;
 }
 
 /* Video de fondo */
@@ -130,16 +130,16 @@ nav ul li a:hover {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 100%; /* Asegura que ocupe todo el ancho para centrar el contenedor */
+    width: 100%;
 }
 
 /* Contenedor para mensajes animados en Acerca de */
 .message-container {
     position: relative;
-    width: 90%; /* Más ancho para textos largos */
-    max-width: 900px; /* Límite para que no sea exagerado */
-    margin: 0 auto; /* Centra el contenedor horizontalmente */
-    text-align: center; /* Centra el texto dentro */
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /* Mensajes animados */
@@ -153,13 +153,13 @@ nav ul li a:hover {
         0 0 5px #00CED1,
         0 0 10px #00CED1,
         0 0 20px #00CED1;
-    background-color: rgba(10, 15, 13, 0.8); /* #0A0F0D con transparencia */
-    padding: 20px; /* Más espacio interno */
+    background-color: #0A0F0D; /* Color exacto del fondo */
+    padding: 20px;
     border-radius: 5px;
-    z-index: 5; /* Encima de los rayos */
-    animation: fade-message 12s infinite; /* 12s para 4 mensajes de 3s cada uno */
-    left: 0; /* Alineado al contenedor */
-    top: 0; /* Asegura que esté en la parte superior del contenedor */
+    z-index: 5;
+    animation: fade-message 12s infinite;
+    left: 0;
+    top: 0;
 }
 
 .message[data-index="0"] { animation-delay: 0s; }
@@ -169,10 +169,10 @@ nav ul li a:hover {
 
 @keyframes fade-message {
     0% { opacity: 0; }
-    8% { opacity: 1; } /* Aparece */
-    25% { opacity: 1; } /* Se queda visible 3 segundos */
-    33% { opacity: 0; } /* Desaparece */
-    100% { opacity: 0; } /* Se queda oculto hasta el siguiente ciclo */
+    8% { opacity: 1; }
+    25% { opacity: 1; }
+    33% { opacity: 0; }
+    100% { opacity: 0; }
 }
 
 /* "Servicios y reparaciones" y textos similares */
@@ -300,7 +300,7 @@ nav ul li a:hover {
 /* Estilos para los íconos de contacto */
 .contact-info {
     font-size: 18px;
-    line-height: 2; /* Espacio entre líneas */
+    line-height: 2;
     color: #00CED1;
     text-shadow: 
         0 0 5px #00CED1,
@@ -308,10 +308,10 @@ nav ul li a:hover {
 }
 
 .contact-icon {
-    width: 20px; /* Más chicos */
+    width: 20px;
     height: 20px;
-    vertical-align: middle; /* Alinea los íconos con el texto */
-    margin-right: 8px; /* Espacio reducido entre ícono y texto */
+    vertical-align: middle;
+    margin-right: 8px;
 }
 
 /* Estilo para los enlaces de contacto */
@@ -324,7 +324,7 @@ nav ul li a:hover {
 }
 
 .contact-link:hover {
-    color: #ADFF2F; /* Verde fosforescente al pasar el ratón */
+    color: #ADFF2F;
     text-shadow: 
         0 0 5px #ADFF2F,
         0 0 10px #ADFF2F;
@@ -337,23 +337,23 @@ nav ul li a:hover {
     }
     nav ul {
         display: flex;
-        flex-direction: row; /* Siempre horizontal */
-        flex-wrap: nowrap; /* No se envuelve, queda en una línea */
+        flex-direction: row;
+        flex-wrap: nowrap;
         justify-content: center;
         padding: 0;
         margin: 0;
     }
     nav ul li {
-        margin: 0 5px; /* Espacio pequeño entre ítems */
+        margin: 0 5px;
     }
     nav ul li a {
-        font-size: 14px; /* Tamaño pequeño pero legible */
-        padding: 2px 5px; /* Espacio interno compacto */
+        font-size: 14px;
+        padding: 2px 5px;
     }
     body:not(.index) nav .nitrox {
         font-size: 18px;
         left: 5px;
-        top: 2px;
+        top: -25px;
     }
     body.index .nitrox {
         font-size: 40px;
@@ -382,7 +382,7 @@ nav ul li a:hover {
 
 @media (max-width: 480px) {
     nav ul li a {
-        font-size: 12px; /* Más pequeño en celulares */
+        font-size: 12px;
         padding: 2px 4px;
     }
     body.index .nitrox {
@@ -391,7 +391,7 @@ nav ul li a:hover {
     body:not(.index) nav .nitrox {
         font-size: 16px;
         left: 5px;
-        top: 2px;
+        top: -20px;
     }
     .subtitulo {
         font-size: 14px;
