@@ -35,8 +35,8 @@ nav {
     z-index: 3;
     display: flex;
     justify-content: center;
-    padding: 10px 20px;
-    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 5px 10px; /* Reducido de 10px 20px */
+    align-items: center;
 }
 
 /* "Nitrox" en las páginas secundarias */
@@ -333,66 +333,78 @@ nav ul li a:hover {
 /* Diseño adaptable para móviles */
 @media (max-width: 768px) {
     nav {
-        padding: 5px 10px;
+        padding: 5px;
     }
     nav ul {
-        flex-direction: column;
-        align-items: center;
+        flex-direction: row; /* Horizontal en tablets */
+        flex-wrap: wrap; /* Se ajusta si no cabe */
+        justify-content: center;
+        padding: 0;
+        margin: 0;
     }
     nav ul li {
-        margin: 5px 0;
+        margin: 2px 5px; /* Más compacto */
     }
     nav ul li a {
-        font-size: 16px;
+        font-size: 14px; /* Más pequeño */
     }
     body:not(.index) nav .nitrox {
-        font-size: 20px;
-        left: 10px;
-        top: 2px; /* Ajuste en móviles */
+        font-size: 18px; /* Más pequeño */
+        left: 5px;
+        top: 2px;
     }
-    body.index .nitrox {
-        font-size: 50px;
-    }
-    .subtitulo {
-        font-size: 18px;
-    }
-    .message-container {
-        width: 95%; /* Más ancho en móviles */
-        max-width: 700px; /* Ajustado para móviles */
-    }
-    .message {
-        font-size: 18px;
-        padding: 15px; /* Ajustado para móviles */
-    }
-    .contact-info {
-        font-size: 16px;
-        line-height: 1.8; /* Ajustado para móviles */
-    }
-    .contact-icon {
-        width: 16px; /* Más pequeño en móviles */
-        height: 16px;
-        margin-right: 6px; /* Espacio ajustado */
-    }
-}
-
-@media (max-width: 480px) {
     body.index .nitrox {
         font-size: 40px;
     }
     .subtitulo {
         font-size: 16px;
     }
+    .message-container {
+        width: 95%;
+        max-width: 700px;
+    }
     .message {
         font-size: 16px;
-        padding: 10px; /* Más pequeño en pantallas chicas */
+        padding: 10px;
     }
     .contact-info {
         font-size: 14px;
-        line-height: 1.6; /* Más compacto */
+        line-height: 1.6;
     }
     .contact-icon {
-        width: 14px; /* Aún más pequeño */
+        width: 14px;
         height: 14px;
         margin-right: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column; /* Columna en celulares pequeños */
+    }
+    nav ul li {
+        margin: 2px 0; /* Más apretado */
+    }
+    nav ul li a {
+        font-size: 12px; /* Aún más pequeño */
+    }
+    body.index .nitrox {
+        font-size: 30px;
+    }
+    .subtitulo {
+        font-size: 14px;
+    }
+    .message {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .contact-info {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+    .contact-icon {
+        width: 12px;
+        height: 12px;
+        margin-right: 4px;
     }
 }
