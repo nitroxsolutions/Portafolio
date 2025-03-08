@@ -52,7 +52,8 @@ body:not(.index) nav .nitrox {
     animation: electrico 1s infinite;
     position: absolute;
     left: 20px;
-    top: 5px;
+    top: 10px;
+    line-height: 1;
 }
 
 /* "Nitrox" grande en la página principal */
@@ -158,21 +159,21 @@ nav ul li a:hover {
     padding: 20px;
     border-radius: 5px;
     z-index: 5;
-    animation: fade-message 12s infinite;
+    animation: fade-message 16s infinite;
     left: 0;
     top: 0;
 }
 
 .message[data-index="0"] { animation-delay: 0s; }
-.message[data-index="1"] { animation-delay: 3s; }
-.message[data-index="2"] { animation-delay: 6s; }
-.message[data-index="3"] { animation-delay: 9s; }
+.message[data-index="1"] { animation-delay: 4s; }
+.message[data-index="2"] { animation-delay: 8s; }
+.message[data-index="3"] { animation-delay: 12s; }
 
 @keyframes fade-message {
     0% { opacity: 0; }
-    8% { opacity: 1; }
+    6% { opacity: 1; }
     25% { opacity: 1; }
-    33% { opacity: 0; }
+    31% { opacity: 0; }
     100% { opacity: 0; }
 }
 
@@ -221,7 +222,7 @@ nav ul li a:hover {
     100% { text-shadow: 0 0 5px #00CED1, 0 0 10px #00CED1, 0 0 20px #00CED1; }
 }
 
-/* Contenedor para los rayos (solo en Proyectos y Acerca) */
+/* Contenedor para los rayos (solo en Proyectos) */
 .rayos {
     position: absolute;
     top: 0;
@@ -358,7 +359,7 @@ nav ul li a:hover {
         font-size: 40px;
     }
     .subtitulo {
-        font-size: 16px;
+        font-size: 20px;
     }
     .message-container {
         width: 95%;
@@ -369,17 +370,24 @@ nav ul li a:hover {
         padding: 10px;
     }
     .contact-info {
-        font-size: 14px;
-        line-height: 1.6;
+        font-size: 16px;
+        line-height: 2.2;
+        position: relative;
+        top: -20px;
+        text-align: center;
     }
     .contact-icon {
-        width: 14px;
-        height: 14px;
-        margin-right: 5px;
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
     }
     .servicios-bg {
+        background-position: left 8cm center;
         background-size: auto 100%;
-        background-position: center top;
+    }
+    .dots::after {
+        content: "...";
+        animation: dots 2s infinite steps(3);
     }
 }
 
@@ -395,23 +403,30 @@ nav ul li a:hover {
         display: none;
     }
     .subtitulo {
-        font-size: 14px;
+        font-size: 18px;
     }
     .message {
         font-size: 14px;
         padding: 8px;
     }
     .contact-info {
-        font-size: 12px;
-        line-height: 1.4;
+        font-size: 14px;
+        line-height: 2;
+        position: relative;
+        top: -15px;
+        text-align: center;
     }
     .contact-icon {
-        width: 12px;
-        height: 12px;
-        margin-right: 4px;
+        width: 16px;
+        height: 16px;
+        margin-right: 6px;
     }
     .servicios-bg {
+        background-position: left 8cm center;
         background-size: auto 100%;
-        background-position: center top;
+    }
+    .dots::after {
+        content: "...";
+        animation: dots 2s infinite steps(3);
     }
 }
