@@ -382,7 +382,7 @@ nav ul li a:hover {
         margin-right: 8px;
     }
     .servicios-bg {
-        background-position: 80% 80%;
+        background: url('CONEJO2.png') no-repeat 80% 80%;
         background-size: 150% auto;
     }
     .dots::after {
@@ -422,7 +422,7 @@ nav ul li a:hover {
         margin-right: 6px;
     }
     .servicios-bg {
-        background-position: 80% 80%;
+        background: url('CONEJO2.png') no-repeat 80% 80%;
         background-size: 150% auto;
     }
     .dots::after {
