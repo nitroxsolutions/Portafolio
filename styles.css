@@ -383,7 +383,7 @@ nav ul li a:hover {
     }
     .servicios-bg {
         background-position: 80% 80%;
-        background-size: 90% auto;
+        background-size: 150% auto;
     }
     .dots::after {
         content: "...";
@@ -423,7 +423,7 @@ nav ul li a:hover {
     }
     .servicios-bg {
         background-position: 80% 80%;
-        background-size: 120% auto;
+        background-size: 150% auto;
     }
     .dots::after {
         content: "...";
