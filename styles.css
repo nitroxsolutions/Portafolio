@@ -381,9 +381,10 @@ nav ul li a:hover {
         height: 18px;
         margin-right: 8px;
     }
+    /*TAMAÑO CONEJO EN MOVIL */
     .servicios-bg {
-        background-position: right 8cm center;
-        background-size: auto 100%;
+        background-position: right 3cm center;
+        background-size: auto 70%;
     }
     .dots::after {
         content: "...";
