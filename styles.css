@@ -52,7 +52,7 @@ body:not(.index) nav .nitrox {
     animation: electrico 1s infinite;
     position: absolute;
     left: 20px;
-    top: 1px;
+    top: -2px;
     line-height: 1;
 }
 
@@ -381,10 +381,9 @@ nav ul li a:hover {
         height: 18px;
         margin-right: 8px;
     }
-    /*TAMAÑO CONEJO EN MOVIL */
     .servicios-bg {
-        background-position: right 3cm center;
-        background-size: auto 70%;
+        background-position: 80% 80%;
+        background-size: 120% auto;
     }
     .dots::after {
         content: "...";
@@ -423,8 +422,8 @@ nav ul li a:hover {
         margin-right: 6px;
     }
     .servicios-bg {
-        background-position: right 8cm center;
-        background-size: auto 100%;
+        background-position: 80% 80%;
+        background-size: 120% auto;
     }
     .dots::after {
         content: "...";
