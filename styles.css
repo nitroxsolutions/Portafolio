@@ -129,7 +129,7 @@ nav ul li a:hover {
     text-align: center;
     z-index: 2;
     position: absolute;
-    top: 50%;
+    top: 55%; /* Ajustado desde 60% para centrar mejor en escritorio */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -335,11 +335,11 @@ nav ul li a:hover {
 /* Estilos del conejito */
 .conejito-link {
     display: inline-block; /* Solo ocupa el tamaño del contenido */
-    margin-top: 130px; /* 5 cm más abajo aprox. */
+    margin-top: 150px; /* Posición en escritorio */
 }
 
 .conejito-boton {
-    width: 200px; /* Más grande en escritorio */
+    width: 200px; /* Tamaño grande en escritorio */
     height: auto;
     cursor: pointer;
     z-index: 6;
@@ -408,8 +408,11 @@ nav ul li a:hover {
         content: "...";
         animation: dots 2s infinite steps(3);
     }
+    .titulo {
+        top: 55%; /* Igual para tablets */
+    }
     .conejito-link {
-        margin-top: 100px; /* Menos espacio en tablets */
+        margin-top: 120px; /* Posición en tablets */
     }
     .conejito-boton {
         width: 120px; /* Tamaño intermedio para tablets */
@@ -454,10 +457,14 @@ nav ul li a:hover {
         content: "...";
         animation: dots 2s infinite steps(3);
     }
+    .titulo {
+        top: 55%; /* Igual para móviles */
+    }
     .conejito-link {
-        margin-top: 80px; /* Menos espacio en móviles */
+        margin-top: 140px; /* Bajado 4 cm más (100px -> 140px) */
+        margin-left: 20%; /* Desplazado hacia la derecha */
     }
     .conejito-boton {
-        width: 80px; /* Tamaño pequeño y apto para móviles */
+        width: 60px; /* Más pequeño en móviles (80px -> 60px) */
     }
 }
