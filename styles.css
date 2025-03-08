@@ -52,7 +52,7 @@ body:not(.index) nav .nitrox {
     animation: electrico 1s infinite;
     position: absolute;
     left: 20px;
-    top: 10px;
+    top: 1px;
     line-height: 1;
 }
 
@@ -382,7 +382,7 @@ nav ul li a:hover {
         margin-right: 8px;
     }
     .servicios-bg {
-        background-position: left 8cm center;
+        background-position: right 8cm center;
         background-size: auto 100%;
     }
     .dots::after {
@@ -422,7 +422,7 @@ nav ul li a:hover {
         margin-right: 6px;
     }
     .servicios-bg {
-        background-position: left 8cm center;
+        background-position: right 8cm center;
         background-size: auto 100%;
     }
     .dots::after {
