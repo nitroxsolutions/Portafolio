@@ -137,7 +137,7 @@ nav ul li a:hover {
 
 /* Clase específica para Acerca de */
 .titulo-acerca {
-    top: 75%; /* Solo para acerca.html */
+    top: 75%; /* Solo para acerca.html en escritorio */
 }
 
 /* Contenedor para mensajes animados en Acerca de */
@@ -504,6 +504,9 @@ nav ul li a:hover {
     .titulo {
         top: 50%; /* Restaurado para tablets */
     }
+    .titulo-acerca {
+        top: 65%; /* Ajustado para tablets */
+    }
     .conejito-link {
         margin-top: 120px; /* Posición en tablets */
     }
@@ -563,12 +566,17 @@ nav ul li a:hover {
     .titulo {
         top: 50%; /* Restaurado para móviles */
     }
+    .titulo-acerca {
+        top: 85%; /* Bajado más para móviles */
+    }
     .conejito-link {
-        margin-top: 180px; /* Posición en móviles */
-        margin-left: 10px; /* Pegado a la izquierda */
+        position: absolute;
+        bottom: 5px; /* Más abajo en móviles */
+        left: 10px; /* Pegado a la izquierda */
+        margin-top: 0; /* Eliminado para usar bottom */
     }
     .conejito-boton {
-        width: 100px; /* Tamaño en móviles */
+        width: 250px; /* Mucho más grande en móviles (200px -> 250px) */
     }
     .servicios-lista {
         top: 40px;
