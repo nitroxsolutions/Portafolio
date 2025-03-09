@@ -124,15 +124,20 @@ nav ul li a:hover {
     opacity: 0.8;
 }
 
-/* Título centrado en todas las páginas */
+/* Título centrado en todas las páginas (valor base) */
 .titulo {
     text-align: center;
     z-index: 2;
     position: absolute;
-    top: 55%; /* Ajustado desde 60% para centrar mejor en escritorio */
+    top: 50%; /* Restaurado a la posición original para la mayoría de las páginas */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
+}
+
+/* Clase específica para Acerca de */
+.titulo-acerca {
+    top: 75%; /* Solo para acerca.html */
 }
 
 /* Contenedor para mensajes animados en Acerca de */
@@ -335,11 +340,11 @@ nav ul li a:hover {
 /* Estilos del conejito */
 .conejito-link {
     display: inline-block; /* Solo ocupa el tamaño del contenido */
-    margin-top: 150px; /* Posición en escritorio */
+    margin-top: 180px; /* Bajado 3 cm más (150px -> 180px) */
 }
 
 .conejito-boton {
-    width: 200px; /* Tamaño grande en escritorio */
+    width: 300px; /* Más grande en escritorio (250px -> 300px) */
     height: auto;
     cursor: pointer;
     z-index: 6;
@@ -349,6 +354,94 @@ nav ul li a:hover {
 .conejito-boton:hover {
     transform: scale(1.1);
     opacity: 0.9;
+}
+
+/* Estilos para la lista de servicios */
+.servicios-lista {
+    position: absolute;
+    top: 60px; /* Debajo del nav */
+    left: 20px;
+    z-index: 2;
+}
+
+.servicios-lista ul {
+    list-style: none;
+    padding: 0;
+}
+
+.servicios-lista li {
+    margin-bottom: 30px; /* 3 espacios hacia abajo aprox. */
+}
+
+.servicios-lista a {
+    color: #00CED1; /* Igual que Cargando... */
+    text-decoration: none;
+    font-size: 18px; /* Reducido de 24px a 18px */
+    font-family: Arial, sans-serif; /* Igual que el resto */
+    text-shadow: 
+        0 0 5px #00CED1,
+        0 0 10px #00CED1,
+        0 0 20px #00CED1;
+    animation: brillo-azul 1.5s infinite; /* Igual que Cargando... */
+}
+
+.servicios-lista a:hover {
+    color: #1B4D3E;
+    text-shadow: none;
+}
+
+/* Estilos para el formulario de registro */
+.registro-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    width: 90%;
+    max-width: 400px;
+}
+
+.registro-form h2 {
+    margin-bottom: 20px;
+}
+
+.registro-form label {
+    display: block;
+    color: #00CED1;
+    font-size: 18px;
+    margin: 10px 0 5px;
+    text-shadow: 
+        0 0 5px #00CED1,
+        0 0 10px #00CED1;
+}
+
+.registro-form input,
+.registro-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #00CED1;
+    background-color: #0A0F0D;
+    color: #D3D3D3;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.registro-form button {
+    background-color: #ADFF2F;
+    color: #0A0F0D;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.registro-form button:hover {
+    background-color: #1B4D3E;
+    color: #D3D3D3;
 }
 
 /* Diseño adaptable para móviles */
@@ -409,13 +502,23 @@ nav ul li a:hover {
         animation: dots 2s infinite steps(3);
     }
     .titulo {
-        top: 55%; /* Igual para tablets */
+        top: 50%; /* Restaurado para tablets */
     }
     .conejito-link {
         margin-top: 120px; /* Posición en tablets */
     }
     .conejito-boton {
-        width: 120px; /* Tamaño intermedio para tablets */
+        width: 150px; /* Tamaño intermedio para tablets */
+    }
+    .servicios-lista {
+        top: 50px;
+        left: 10px;
+    }
+    .servicios-lista a {
+        font-size: 16px; /* Reducido de 20px a 16px para tablets */
+    }
+    .registro-form {
+        max-width: 350px;
     }
 }
 
@@ -458,13 +561,23 @@ nav ul li a:hover {
         animation: dots 2s infinite steps(3);
     }
     .titulo {
-        top: 55%; /* Igual para móviles */
+        top: 50%; /* Restaurado para móviles */
     }
     .conejito-link {
-        margin-top: 140px; /* Bajado 4 cm más (100px -> 140px) */
-        margin-left: 20%; /* Desplazado hacia la derecha */
+        margin-top: 180px; /* Posición en móviles */
+        margin-left: 10px; /* Pegado a la izquierda */
     }
     .conejito-boton {
-        width: 60px; /* Más pequeño en móviles (80px -> 60px) */
+        width: 100px; /* Tamaño en móviles */
+    }
+    .servicios-lista {
+        top: 40px;
+        left: 5px;
+    }
+    .servicios-lista a {
+        font-size: 14px; /* Reducido de 18px a 14px para móviles */
+    }
+    .registro-form {
+        max-width: 300px;
     }
 }
