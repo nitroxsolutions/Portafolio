@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="hero">
-        <video autoplay muted loop class="background-video">
+        <video autoplay muted loop playsinline class="background-video">
             <source src="humo.mp4" type="video/mp4">
             Tu navegador no soporta el video.
         </video>
@@ -16,7 +16,7 @@
             <h1 class="nitrox">Nitrox</h1>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="servicios.html" onclick="preventReload(event)">Servicios</a></li>
                 <li><a href="proyectos.html">Proyectos</a></li>
                 <li><a href="acerca.html">Acerca de</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
@@ -38,5 +38,12 @@
         </div>
     </div>
     <script src="script.js"></script>
+    <script>
+        function preventReload(event) {
+            if (window.location.pathname.endsWith("servicios.html")) {
+                event.preventDefault();
+            }
+        }
+    </script>
 </body>
 </html>

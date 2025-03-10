@@ -385,8 +385,7 @@ nav ul li a:hover {
 .menu-close-btn {
     position: absolute;
     bottom: 10px; /* Abajo del menú lateral */
-    left: calc(50% + 112px); /* 4 cm (112px) a la derecha del centro */
-    transform: translateX(-50%);
+    right: 10px; /* Pegado al borde derecho */
     width: 35px; /* Mismo tamaño que menu-btn */
     height: 35px;
     cursor: pointer;
@@ -574,7 +573,7 @@ nav ul li a:hover {
     .menu-close-btn {
         width: 30px;
         height: 30px;
-        left: calc(50% + 112px); /* 4 cm a la derecha */
+        right: 10px; /* Pegado al borde derecho */
     }
     .menu-lateral {
         top: 32px; /* Al ras del nav */
@@ -658,7 +657,7 @@ nav ul li a:hover {
     .menu-close-btn {
         width: 25px;
         height: 25px;
-        left: calc(50% + 112px); /* 4 cm a la derecha */
+        right: 10px; /* Pegado al borde derecho */
     }
     .menu-lateral {
         top: 29px; /* Subido 1 mm desde 32px */
