@@ -9,7 +9,7 @@
 <body>
     <div class="hero servicios-bg">
         <nav>
-            <h1 class="nitrox">Nitrox</h1> <!-- Título añadido para escritorio -->
+            <h1 class="nitrox">Nitrox</h1>
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="servicios.html" onclick="preventReload(event)">Servicios</a></li>
@@ -40,7 +40,7 @@
             menu.classList.remove("active"); // Asegurar que el menú esté oculto al cargar
             menu.style.visibility = "hidden"; // Reforzar ocultamiento
             btn.style.display = "block"; // Mostrar flecha derecha al cargar
-            btn.onerror = function() { console.error("Error loading flechaderecha.png"); }; // Depuración
+            btn.onerror = function() { console.error("Error al cargar flechaderecha.png"); }; // Depuración
         });
 
         function toggleMenu() {
