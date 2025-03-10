@@ -369,7 +369,7 @@ nav ul li a:hover {
 /* Menú lateral en Servicios */
 .menu-btn {
     position: fixed;
-    top: 30px; /* Bajado 3 mm (8px) desde 22px */
+    top: 30px; /* Posición en escritorio */
     left: 10px;
     z-index: 4;
     width: 35px; /* Tamaño en escritorio */
@@ -407,10 +407,12 @@ nav ul li a:hover {
     z-index: 2; /* Debajo del nav (z-index: 3) */
     transition: left 0.3s ease;
     padding: 20px;
+    visibility: hidden; /* Oculto por defecto */
 }
 
 .menu-lateral.active {
     left: 0; /* Desplegado */
+    visibility: visible; /* Visible solo cuando está activo */
 }
 
 .menu-lateral ul {
@@ -565,7 +567,7 @@ nav ul li a:hover {
         width: 150px; /* Tamaño intermedio para tablets */
     }
     .menu-btn {
-        top: 25px; /* Bajado 3 mm desde 17px */
+        top: 25px; /* Posición en tablets */
         width: 30px; /* Más pequeña */
         height: 30px;
     }
@@ -579,9 +581,11 @@ nav ul li a:hover {
         width: 250px;
         left: -250px;
         height: calc(100vh - 32px);
+        visibility: hidden; /* Oculto por defecto */
     }
     .menu-lateral.active {
         left: 0;
+        visibility: visible;
     }
     .menu-lateral a {
         font-size: 16px;
@@ -647,7 +651,7 @@ nav ul li a:hover {
         width: 200px; /* Reducido en móviles */
     }
     .menu-btn {
-        top: 20px; /* Bajado 3 mm desde 12px */
+        top: 20px; /* Posición en móviles */
         width: 25px; /* Más pequeña */
         height: 25px;
     }
@@ -657,13 +661,15 @@ nav ul li a:hover {
         left: calc(50% + 112px); /* 4 cm a la derecha */
     }
     .menu-lateral {
-        top: 29px; /* Subido 1 mm (3px) desde 32px */
+        top: 29px; /* Subido 1 mm desde 32px */
         width: 200px;
         left: -200px;
         height: calc(100vh - 29px);
+        visibility: hidden; /* Oculto por defecto */
     }
     .menu-lateral.active {
         left: 0;
+        visibility: visible;
     }
     .menu-lateral a {
         font-size: 14px;

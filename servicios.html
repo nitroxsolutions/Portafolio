@@ -37,6 +37,7 @@
             const menu = document.getElementById("menuLateral");
             const btn = document.getElementById("menuBtn");
             menu.classList.remove("active"); // Asegurar que el menú esté oculto al cargar
+            menu.style.visibility = "hidden"; // Reforzar ocultamiento
             btn.style.display = "block"; // Mostrar flecha derecha al cargar
         });
 
@@ -45,8 +46,10 @@
             const btn = document.getElementById("menuBtn");
             menu.classList.toggle("active");
             if (menu.classList.contains("active")) {
+                menu.style.visibility = "visible"; // Mostrar menú
                 btn.style.display = "none"; // Esconde flecha derecha
             } else {
+                menu.style.visibility = "hidden"; // Ocultar menú
                 btn.style.display = "block"; // Muestra flecha derecha
             }
         }
