@@ -494,6 +494,28 @@ nav ul li a:hover {
     color: #D3D3D3;
 }
 
+/* Mensaje de confirmación solo para móviles */
+@media (max-width: 480px) {
+    .form-confirmation {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #1B4D3E;
+        color: #ADFF2F;
+        padding: 20px;
+        border-radius: 5px;
+        text-align: center;
+        z-index: 5;
+        font-size: 16px;
+        box-shadow: 0 0 10px #00CED1;
+    }
+    .form-confirmation.visible {
+        display: block;
+    }
+}
+
 /* Diseño adaptable para móviles */
 @media (max-width: 768px) {
     nav {
