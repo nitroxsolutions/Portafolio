@@ -36,10 +36,10 @@
     </div>
     <script>
         document.getElementById("registroForm").addEventListener("submit", function(event) {
-            event.preventDefault(); // Evita el envío por defecto
-            this.submit(); // Envía el formulario a Formspree
-            alert("Mensaje enviado, pronto se contactarán con usted."); // Mensaje al cliente
-            this.reset(); // Limpia el formulario
+            event.preventDefault();
+            this.submit();
+            alert("Mensaje enviado, pronto se contactarán con usted.");
+            this.reset();
         });
     </script>
 </body>

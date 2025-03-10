@@ -129,7 +129,7 @@ nav ul li a:hover {
     text-align: center;
     z-index: 2;
     position: absolute;
-    top: 50%; /* Restaurado a la posición original para la mayoría de las páginas */
+    top: 50%; /* Base para otras páginas */
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
@@ -137,7 +137,7 @@ nav ul li a:hover {
 
 /* Clase específica para Acerca de */
 .titulo-acerca {
-    top: 75%; /* Solo para acerca.html en escritorio */
+    top: 50%; /* Centrado en escritorio */
 }
 
 /* Contenedor para mensajes animados en Acerca de */
@@ -314,37 +314,47 @@ nav ul li a:hover {
         0 0 10px #00CED1;
 }
 
+/* Iconos grandes y centrados en Contacto */
 .contact-icon {
-    width: 20px;
-    height: 20px;
-    vertical-align: middle;
-    margin-right: 8px;
+    width: 100px; /* Grandes en escritorio */
+    height: 100px;
+    margin: 20px; /* Espaciado entre íconos */
+    transition: transform 0.3s ease;
+}
+
+.contact-icon:hover {
+    transform: scale(1.1); /* Efecto al pasar el mouse */
+}
+
+/* Contenedor para centrar los íconos en Contacto */
+.contact-icons-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 2;
 }
 
 /* Estilo para los enlaces de contacto */
 .contact-link {
-    color: #00CED1;
     text-decoration: none;
-    text-shadow: 
-        0 0 5px #00CED1,
-        0 0 10px #00CED1;
-}
-
-.contact-link:hover {
-    color: #ADFF2F;
-    text-shadow: 
-        0 0 5px #ADFF2F,
-        0 0 10px #ADFF2F;
 }
 
 /* Estilos del conejito */
 .conejito-link {
-    display: inline-block; /* Solo ocupa el tamaño del contenido */
-    margin-top: 180px; /* Bajado 3 cm más (150px -> 180px) */
+    position: absolute;
+    bottom: 10px; /* Pegado al fondo en escritorio */
+    left: 50%;
+    transform: translateX(-50%); /* Centrado horizontalmente */
+    margin-top: 0; /* Eliminado */
 }
 
 .conejito-boton {
-    width: 300px; /* Más grande en escritorio (250px -> 300px) */
+    width: 300px; /* Tamaño en escritorio */
     height: auto;
     cursor: pointer;
     z-index: 6;
@@ -489,9 +499,9 @@ nav ul li a:hover {
         text-align: center;
     }
     .contact-icon {
-        width: 18px;
-        height: 18px;
-        margin-right: 8px;
+        width: 80px; /* Ajustado para tablets */
+        height: 80px;
+        margin: 15px;
     }
     .servicios-bg {
         background: url('CONEJO2.png') no-repeat 80% 80%;
@@ -505,10 +515,12 @@ nav ul li a:hover {
         top: 50%; /* Restaurado para tablets */
     }
     .titulo-acerca {
-        top: 65%; /* Ajustado para tablets */
+        top: 50%; /* Centrado en tablets */
     }
     .conejito-link {
-        margin-top: 120px; /* Posición en tablets */
+        bottom: 10px; /* Pegado al fondo */
+        left: 50%;
+        transform: translateX(-50%); /* Centrado */
     }
     .conejito-boton {
         width: 150px; /* Tamaño intermedio para tablets */
@@ -518,7 +530,7 @@ nav ul li a:hover {
         left: 10px;
     }
     .servicios-lista a {
-        font-size: 16px; /* Reducido de 20px a 16px para tablets */
+        font-size: 16px; /* Reducido para tablets */
     }
     .registro-form {
         max-width: 350px;
@@ -539,6 +551,9 @@ nav ul li a:hover {
     .subtitulo {
         font-size: 18px;
     }
+    .message-container {
+        width: 95%;
+    }
     .message {
         font-size: 14px;
         padding: 8px;
@@ -551,9 +566,9 @@ nav ul li a:hover {
         text-align: center;
     }
     .contact-icon {
-        width: 16px;
-        height: 16px;
-        margin-right: 6px;
+        width: 60px; /* Grandes en móviles */
+        height: 60px;
+        margin: 10px;
     }
     .servicios-bg {
         background: url('CONEJO2.png') no-repeat 80% 80%;
@@ -567,23 +582,22 @@ nav ul li a:hover {
         top: 50%; /* Restaurado para móviles */
     }
     .titulo-acerca {
-        top: 85%; /* Bajado más para móviles */
+        top: 50%; /* Centrado en móviles */
     }
     .conejito-link {
-        position: absolute;
-        bottom: 5px; /* Más abajo en móviles */
-        left: 10px; /* Pegado a la izquierda */
-        margin-top: 0; /* Eliminado para usar bottom */
+        bottom: 5px; /* Pegado al fondo */
+        left: 50%;
+        transform: translateX(-50%); /* Centrado */
     }
     .conejito-boton {
-        width: 250px; /* Mucho más grande en móviles (200px -> 250px) */
+        width: 250px; /* Tamaño en móviles */
     }
     .servicios-lista {
         top: 40px;
         left: 5px;
     }
     .servicios-lista a {
-        font-size: 14px; /* Reducido de 18px a 14px para móviles */
+        font-size: 14px; /* Reducido para móviles */
     }
     .registro-form {
         max-width: 300px;
