@@ -17,7 +17,7 @@
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <img src="flechaderecha.png" alt="Menú" class="menu-btn" id="menuBtn" onclick="toggleMenu()">
+        <img src="flechaderecha.png" alt="Abrir Menú" class="menu-btn" id="menuBtn" onclick="toggleMenu()">
         <div class="menu-lateral" id="menuLateral">
             <ul>
                 <li><a href="registro.html">Cursos y capacitación en Informática</a></li>
@@ -29,6 +29,7 @@
                 <li><a href="registro.html">Curso de estructura de datos con Python</a></li>
                 <li><a href="registro.html">Reparación de equipos</a></li>
             </ul>
+            <img src="flechaizquierda.png" alt="Cerrar Menú" class="menu-close-btn" onclick="toggleMenu()">
         </div>
     </div>
     <script>
@@ -37,9 +38,9 @@
             const btn = document.getElementById("menuBtn");
             menu.classList.toggle("active");
             if (menu.classList.contains("active")) {
-                btn.src = "flechaizquierda.png"; // Cambia a flecha izquierda
+                btn.style.display = "none"; // Esconde flecha derecha
             } else {
-                btn.src = "flechaderecha.png"; // Vuelve a flecha derecha
+                btn.style.display = "block"; // Muestra flecha derecha
             }
         }
     </script>
