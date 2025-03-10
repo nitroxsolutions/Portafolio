@@ -651,7 +651,7 @@ nav ul li a:hover {
     }
     .servicios-bg {
         background: url('CONEJO2.png') no-repeat 80% 80%;
-        background-size: 150% auto;
+        background-size: 150% 102%; /* Alargado 2 mm hacia abajo */
     }
     .dots::after {
         content: "...";
@@ -672,7 +672,8 @@ nav ul li a:hover {
         width: 200px; /* Reducido en móviles */
     }
     .menu-btn {
-        top: 20px; /* Posición en móviles */
+        top: 22.5px; /* Bajado 2.5 mm desde 20px */
+        left: 7.5px; /* Movido 2.5 mm a la izquierda desde 10px */
         width: 25px; /* Más pequeña */
         height: 25px;
     }
