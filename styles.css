@@ -96,7 +96,7 @@ nav ul li a:hover {
     text-shadow: none;
 }
 
-/* La sección    sección principal (fondo con video, rayos o imagen) */
+/* La sección principal (fondo con video, rayos o imagen) */
 .hero {
     width: 100%;
     height: 100vh;
@@ -120,7 +120,7 @@ nav ul li a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 0;
+    z-index: -1; /* Asegurar que esté detrás de todo */
     opacity: 0.8;
 }
 
@@ -369,7 +369,7 @@ nav ul li a:hover {
 /* Menú lateral en Servicios */
 .menu-btn {
     position: fixed;
-    top: 22px; /* Subido 1 cm (28px) desde 50px */
+    top: 30px; /* Bajado 3 mm (8px) desde 22px */
     left: 10px;
     z-index: 4;
     width: 35px; /* Tamaño en escritorio */
@@ -385,7 +385,7 @@ nav ul li a:hover {
 .menu-close-btn {
     position: absolute;
     bottom: 10px; /* Abajo del menú lateral */
-    left: 50%;
+    left: calc(50% + 112px); /* 4 cm (112px) a la derecha del centro */
     transform: translateX(-50%);
     width: 35px; /* Mismo tamaño que menu-btn */
     height: 35px;
@@ -399,7 +399,7 @@ nav ul li a:hover {
 
 .menu-lateral {
     position: fixed;
-    top: 32px; /* Subido 3 mm (8px) desde 40px para quedar al ras del nav */
+    top: 32px; /* Al ras del nav */
     left: -300px; /* Escondido por defecto */
     width: 300px;
     height: calc(100vh - 32px); /* Hasta el borde inferior sin tapar nav */
@@ -565,16 +565,17 @@ nav ul li a:hover {
         width: 150px; /* Tamaño intermedio para tablets */
     }
     .menu-btn {
-        top: 17px; /* Subido 1 cm desde 45px */
+        top: 25px; /* Bajado 3 mm desde 17px */
         width: 30px; /* Más pequeña */
         height: 30px;
     }
     .menu-close-btn {
         width: 30px;
         height: 30px;
+        left: calc(50% + 112px); /* 4 cm a la derecha */
     }
     .menu-lateral {
-        top: 32px; /* Subido 3 mm desde 40px */
+        top: 32px; /* Al ras del nav */
         width: 250px;
         left: -250px;
         height: calc(100vh - 32px);
@@ -646,19 +647,20 @@ nav ul li a:hover {
         width: 200px; /* Reducido en móviles */
     }
     .menu-btn {
-        top: 12px; /* Subido 1 cm desde 40px */
+        top: 20px; /* Bajado 3 mm desde 12px */
         width: 25px; /* Más pequeña */
         height: 25px;
     }
     .menu-close-btn {
         width: 25px;
         height: 25px;
+        left: calc(50% + 112px); /* 4 cm a la derecha */
     }
     .menu-lateral {
-        top: 32px; /* Subido 3 mm desde 35px */
+        top: 29px; /* Subido 1 mm (3px) desde 32px */
         width: 200px;
         left: -200px;
-        height: calc(100vh - 32px);
+        height: calc(100vh - 29px);
     }
     .menu-lateral.active {
         left: 0;

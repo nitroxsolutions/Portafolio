@@ -33,6 +33,13 @@
         </div>
     </div>
     <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menu = document.getElementById("menuLateral");
+            const btn = document.getElementById("menuBtn");
+            menu.classList.remove("active"); // Asegurar que el menú esté oculto al cargar
+            btn.style.display = "block"; // Mostrar flecha derecha al cargar
+        });
+
         function toggleMenu() {
             const menu = document.getElementById("menuLateral");
             const btn = document.getElementById("menuBtn");
