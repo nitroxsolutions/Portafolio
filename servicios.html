@@ -17,10 +17,10 @@
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <img src="flechaderecha.png" alt="Menú" class="menu-btn" onclick="toggleMenu()">
+        <img src="flechaderecha.png" alt="Menú" class="menu-btn" id="menuBtn" onclick="toggleMenu()">
         <div class="menu-lateral" id="menuLateral">
             <ul>
-                <li><a href="registro técnico.html">Cursos y capacitación en Informática</a></li>
+                <li><a href="registro.html">Cursos y capacitación en Informática</a></li>
                 <li><a href="registro.html">Cursos de Excel</a></li>
                 <li><a href="registro.html">Cursos de modelado 3D en Blender</a></li>
                 <li><a href="registro.html">Creación de páginas web</a></li>
@@ -33,7 +33,14 @@
     </div>
     <script>
         function toggleMenu() {
-            document.getElementById("menuLateral").classList.toggle("active");
+            const menu = document.getElementById("menuLateral");
+            const btn = document.getElementById("menuBtn");
+            menu.classList.toggle("active");
+            if (menu.classList.contains("active")) {
+                btn.src = "flechaizquierda.png"; // Cambia a flecha izquierda
+            } else {
+                btn.src = "flechaderecha.png"; // Vuelve a flecha derecha
+            }
         }
     </script>
 </body>
